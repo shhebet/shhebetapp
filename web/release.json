@@ -1,0 +1,10 @@
+{
+  "product": "Shhebet Web",
+  "version": "0.0.0.1",
+  "stage": "beta",
+  "builtAt": "2026-07-17T09:27:36.845Z",
+  "serverless": true,
+  "p2p": true,
+  "iceServers": [],
+  "accent": "#26B396"
+}

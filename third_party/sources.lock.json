@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-07-17",
+  "sources": [
+    {
+      "name": "WebRTC specification/source",
+      "url": "https://www.w3.org/TR/webrtc/",
+      "git": "https://github.com/w3c/webrtc-pc.git",
+      "revision": "42d503ef216bcf49cc7b1307e225fb5dfdbd0e0a",
+      "usage": "Protocol/API foundation for RTCPeerConnection, DataChannel, and media tracks."
+    },
+    {
+      "name": "Telegram for Android",
+      "git": "https://github.com/DrKLO/Telegram.git",
+      "revision": "9bcf3d2769c6d3f07105a992e5d9493e33ac3348",
+      "license": "GPL-2.0-or-later",
+      "usage": "Open-source Android messenger client reference."
+    },
+    {
+      "name": "Telegram for iOS",
+      "git": "https://github.com/TelegramMessenger/Telegram-iOS.git",
+      "revision": "6e370e06d147b091b07903071cb1b8a22152492d",
+      "license": "GPL-2.0-or-later per telegram.org apps listing",
+      "usage": "Open-source iOS messenger client reference."
+    },
+    {
+      "name": "Telegram Web A",
+      "git": "https://github.com/Ajaxy/telegram-tt.git",
+      "revision": "58d8e948efe4ff1212b21d97b45b23b4db65a513",
+      "license": "GPL-3.0-or-later",
+      "usage": "Open-source Telegram-like Web UX/client reference."
+    }
+  ]
+}
+

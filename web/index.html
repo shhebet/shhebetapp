@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#26B396">
+    <title>Shhebet</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Chats">
+        <header class="topbar">
+          <button id="menuButton" class="icon-button" title="Menu" aria-label="Menu">☰</button>
+          <div class="brand">
+            <strong>Shhebet</strong>
+            <span id="versionBadge">0.0.0.1 beta</span>
+          </div>
+          <button id="installButton" class="icon-button" title="Install" aria-label="Install">↓</button>
+        </header>
+
+        <section class="profile-panel" aria-label="Profile">
+          <label>
+            Name
+            <input id="displayName" autocomplete="name" placeholder="Display name">
+          </label>
+          <label>
+            Phone
+            <input id="phoneNumber" autocomplete="tel" inputmode="tel" placeholder="+15551234567">
+          </label>
+          <button id="createIdentity" class="primary">Create local identity</button>
+          <p id="identityStatus" class="muted">No identity yet.</p>
+        </section>
+
+        <section class="stories-strip" aria-label="Stories">
+          <button class="story active" data-kind="story">My Story</button>
+          <button class="story" data-kind="channel">Channel</button>
+          <button class="story" data-kind="group">Group</button>
+        </section>
+
+        <nav class="chat-list" aria-label="Dialogs">
+          <button class="chat-row active" data-kind="direct">
+            <span class="avatar">S</span>
+            <span>
+              <strong>Saved P2P Session</strong>
+              <small>Manual WebRTC signaling</small>
+            </span>
+          </button>
+          <button class="chat-row" data-kind="group">
+            <span class="avatar">G</span>
+            <span>
+              <strong>Group Mesh</strong>
+              <small>Encrypted fanout envelope</small>
+            </span>
+          </button>
+          <button class="chat-row" data-kind="channel">
+            <span class="avatar">C</span>
+            <span>
+              <strong>Shhebet Channel</strong>
+              <small>Broadcast packet</small>
+            </span>
+          </button>
+        </nav>
+      </aside>
+
+      <section class="chat-pane" aria-label="Messages">
+        <header class="chat-header">
+          <div>
+            <strong id="chatTitle">Saved P2P Session</strong>
+            <span id="connectionState">offline</span>
+          </div>
+          <div class="header-actions">
+            <button id="audioCall" class="icon-button" title="Audio call" aria-label="Audio call">☎</button>
+            <button id="videoCall" class="icon-button" title="Video call" aria-label="Video call">▣</button>
+          </div>
+        </header>
+
+        <section class="signaling-grid" aria-label="Peer signaling">
+          <div>
+            <div class="section-title">Create offer</div>
+            <button id="createOffer" class="secondary">Offer</button>
+            <button id="acceptAnswer" class="secondary">Accept answer</button>
+          </div>
+          <div>
+            <div class="section-title">Answer offer</div>
+            <button id="acceptOffer" class="secondary">Accept offer</button>
+            <button id="createAnswer" class="secondary">Answer</button>
+          </div>
+          <label class="signal-box">
+            Local signal
+            <textarea id="localSignal" readonly spellcheck="false"></textarea>
+          </label>
+          <label class="signal-box">
+            Remote signal
+            <textarea id="remoteSignal" spellcheck="false" placeholder="Paste peer signal here"></textarea>
+          </label>
+        </section>
+
+        <section class="media-stage" aria-label="Call media">
+          <video id="localVideo" muted playsinline></video>
+          <video id="remoteVideo" playsinline autoplay></video>
+        </section>
+
+        <ol id="messages" class="messages" aria-live="polite"></ol>
+
+        <form id="composer" class="composer">
+          <select id="messageKind" title="Message kind" aria-label="Message kind">
+            <option value="direct">Direct</option>
+            <option value="group">Group</option>
+            <option value="channel">Channel</option>
+            <option value="story">Story</option>
+          </select>
+          <input id="messageInput" autocomplete="off" placeholder="Message">
+          <button class="primary" type="submit">Send</button>
+        </form>
+      </section>
+
+      <aside class="details" aria-label="Details">
+        <section>
+          <h2>Network</h2>
+          <dl>
+            <dt>Mode</dt>
+            <dd>serverless only-P2P</dd>
+            <dt>ICE servers</dt>
+            <dd>[]</dd>
+            <dt>Signaling</dt>
+            <dd>manual copy/paste</dd>
+            <dt>Accent</dt>
+            <dd>#26B396</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Security</h2>
+          <p>WebRTC DTLS plus AES-GCM encrypted JSON envelopes after ECDH key agreement.</p>
+        </section>
+        <section>
+          <h2>Phone Claim</h2>
+          <pre id="phoneClaim">No claim yet.</pre>
+        </section>
+      </aside>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+

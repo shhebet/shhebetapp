@@ -1,0 +1,12 @@
+{
+  "name": "Shhebet",
+  "short_name": "Shhebet",
+  "description": "Serverless only-P2P messenger beta",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#EEF4F2",
+  "theme_color": "#26B396",
+  "icons": []
+}
+

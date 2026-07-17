@@ -1,0 +1,37 @@
+{
+  "name": "shhebetapp",
+  "version": "0.0.0.1",
+  "private": false,
+  "type": "module",
+  "description": "Serverless only-P2P messenger foundation based on WebRTC and Telegram open-source client references.",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://shhebet.online",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shhebet/shhebetapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shhebet/shhebetapp/issues"
+  },
+  "keywords": [
+    "messenger",
+    "p2p",
+    "webrtc",
+    "telegram-ui",
+    "serverless",
+    "android",
+    "ios"
+  ],
+  "scripts": {
+    "sources:fetch": "node scripts/fetch-open-source-sources.mjs",
+    "web:build": "node scripts/build-web.mjs",
+    "web:serve": "node scripts/serve-web.mjs",
+    "android:build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-android-apk.ps1",
+    "ios:package": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package-ios.ps1",
+    "release:verify": "node scripts/verify-release.mjs",
+    "test": "node --test \"test/**/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

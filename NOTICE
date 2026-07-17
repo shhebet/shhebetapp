@@ -1,0 +1,10 @@
+Shhebet App
+Copyright (C) 2026 Shhebet contributors.
+
+This repository is an independent implementation. It is grounded in the
+open-source references listed in third_party/sources.lock.json:
+W3C WebRTC, Telegram for Android, Telegram for iOS, and Telegram Web A.
+
+Telegram is a trademark of Telegram FZ-LLC. Shhebet is not affiliated with or
+endorsed by Telegram.
+

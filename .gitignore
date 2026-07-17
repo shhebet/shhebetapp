@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Local upstream checkouts fetched by scripts/fetch-open-source-sources.mjs
+third_party/upstream/
+
+# Build outputs
+build/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Android generated files and signing material
+platforms/android/build/
+platforms/android/local.properties
+*.keystore
+*.jks
+*.idsig
+
+# iOS generated files
+platforms/ios/build/
+platforms/ios/DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# P2P runtime state may contain private user data
+.shhebet-p2p/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Logs and OS/editor files
+*.log
+Desktop.ini
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
